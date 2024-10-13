@@ -52,8 +52,17 @@ http://localhost
 ````
 
 
-### Endpoints
+### Documentação Endpoints
 **Na pasta postman-collection encontra-se as requsições de exemplo para todos os endpoints.**
 ```bash
 Spassu-bookstore.postman_collection.json
 ````
+
+url para acesso da documentação publica
+
+https://documenter.getpostman.com/view/516445/2sAXxS9CGF
+
+
+![alt text](https://res.cloudinary.com/dcwdff5pu/image/upload/v1728851255/Screenshot_47_r6uuv8.png)
+
+
