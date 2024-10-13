@@ -58,7 +58,7 @@ http://localhost
 Spassu-bookstore.postman_collection.json
 ````
 
-url para acesso da documentação publica
+url para acesso da documentação publica:
 
 https://documenter.getpostman.com/view/516445/2sAXxS9CGF
 
