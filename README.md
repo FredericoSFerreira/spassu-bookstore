@@ -18,10 +18,10 @@
 
 - Clonar repositório
 ```shell
-git clone https://github.com/FredericoSFerreira/spassu-bookstore
+git clone https://github.com/FredericoSFerreira/spassu-bookstore-api
 ````
 
-- Após clonar o repositorio, basta rodar o comando abaixo, para subir os container. Obs: Foi utilizado o *Laravel Sail*, desenvolvimento do mesmo, por se tratar de uma configuração rápida com Docker:
+- Após clonar o repositorio, basta rodar o comando abaixo, para subir os container.
 ```shell
 ./vendor/bin/sail up
 ````
@@ -36,7 +36,7 @@ sail composer install
 sail artisan key:generate
 ````
 
-- Rodar Migrates:
+- Rodar as Migrações do banco de dados:
 ```shell
 sail artisan migrate
 ````

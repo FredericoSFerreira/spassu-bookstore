@@ -121,8 +121,26 @@ class LivroController extends Controller
 
         $autoresMaisLivros = DB::select($consulta);
 
-        return response()->json(['livros' => $livros, 'autores' => $autores, 'assunto' => $assuntos, 'livros_mais_caros' => $livrosMaisCaros,
-            'autores_mais_livros' => $autoresMaisLivros]);
+
+        $anoPublicacao = DB::select('
+            Select count(livro.ano_publicacao) as qtd, livro.ano_publicacao from livro
+            group by livro.ano_publicacao order by livro.ano_publicacao asc');
+
+        $editora = DB::select('
+            Select count(livro . editora) as qtd, livro . editora from livro
+            group by livro . editora');
+
+
+        return response()->json(
+            [
+                'livros' => $livros,
+                'autores' => $autores,
+                'assunto' => $assuntos,
+                'livros_mais_caros' => $livrosMaisCaros,
+                'autores_mais_livros' => $autoresMaisLivros,
+                'editoras' => $editora,
+                'ano_publicacao' => $anoPublicacao
+            ]);
     }
 
 }

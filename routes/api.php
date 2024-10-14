@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -9,10 +10,8 @@ use \App\Http\Controllers\AssuntoController;
 use \App\Http\Controllers\LivroController;
 use App\Http\Middleware\JwtMiddleware;
 
-Route::get('books', function (Request $request) {
-    return response()->json(['status' => true]);
-});
 
+Route::post('login', [LoginController::class, 'login']);
 
 Route::get('autores', [AutorController::class, 'index']);
 Route::post('autores', [AutorController::class, 'store']);
